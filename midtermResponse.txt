@@ -1,0 +1,9 @@
+My midterm project completes most of the fundamental gameplay concepts I had planned on my Midterm project scope document. 
+The goals I can say I accomplished according to my scope plan is implementing the health bar, being able to move and fight the enemy (with animations) , and the game over text when somebody dies/loses. 
+Some goals that I decided to modify were implementing AI into the game. 
+At first I was thinking of making the game a single player game where you fight the enemy bot. 
+However, I quickly realized that  implementing AI into a game was above my experience level. 
+Instead I decided to make the game a multiplayer game where 2 players fight against each other. 
+A goal I chose to completely abandon is the animation sound and background music mostly because I was short on time. 
+Another goal I abandoned is the main menu system which was also abandoned because of time constraints. 
+I think I implemented most of the core gameplay mechanics of the game, but these are things that would have been nice to accomplish. (Unity Version 2019.4.9f1)
