@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
                     position.x--;
                     this.transform.position = position;
                     animator.SetBool("Punch", false);
+                    animator.SetBool("Kick", false);
 
                 }
             if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -43,12 +44,19 @@ public class PlayerMovement : MonoBehaviour
                     position.x++;
                     this.transform.position = position;
                     animator.SetBool("Punch", false);
+                    animator.SetBool("Kick", false);
                 }
        
             if (Input.GetKeyDown(KeyCode.Space))
                 {
                     animator.SetBool("Punch", true);
+                     animator.SetBool("Kick", false);
                 }
+            if (Input.GetKeyDown(KeyCode.RightShift))
+            {
+                animator.SetBool("Kick", true);
+                animator.SetBool("Punch", false);
+            }
             }
         }
     }

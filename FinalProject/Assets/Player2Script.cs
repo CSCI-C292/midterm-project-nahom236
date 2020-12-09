@@ -33,6 +33,7 @@ public class Player2Script : MonoBehaviour
                 position.x--;
                 this.transform.position = position;
                 animator.SetBool("Punch", false);
+                animator.SetBool("Kick", false);
             }
 
             if (Input.GetKeyDown(KeyCode.D)) {
@@ -40,11 +41,18 @@ public class Player2Script : MonoBehaviour
                 position.x++;
                 this.transform.position = position;
                 animator.SetBool("Punch", false);
+                animator.SetBool("Kick", false);
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 animator.SetBool("Punch", true);
+                animator.SetBool("Kick", false);
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                animator.SetBool("Kick", true);
+                animator.SetBool("Punch", false);
             }
         }
     }

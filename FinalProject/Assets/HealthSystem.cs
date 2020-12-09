@@ -26,4 +26,8 @@ public class HealthSystem : MonoBehaviour
             return false;
         }
     }
+
+    public int currentHealth() {
+        return (int) slider.value;
+    }
 }

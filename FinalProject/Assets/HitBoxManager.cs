@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HitBoxManager : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class HitBoxManager : MonoBehaviour
                 if (p2Health.isDone()==true) {
                     player2.animator.SetBool("KO", true);
                     
+
                 }
             }
         }
