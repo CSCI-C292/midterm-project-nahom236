@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public GameObject display;
-    public int secondsLeft = 5;
+    public int secondsLeft = 10;
     public bool takingAway = false;
 
     void Start() {

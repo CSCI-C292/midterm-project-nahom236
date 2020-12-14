@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class HitBoxManager : MonoBehaviour
 {
-
     public PlayerMovement player1;
     public Player2Script player2;
     public BoxCollider2D frame;
@@ -15,6 +14,7 @@ public class HitBoxManager : MonoBehaviour
     public HealthSystem p2Health;
     public HealthSystem p1Health;
 
+    AudioSource punch;
 
 
 
@@ -48,6 +48,9 @@ public class HitBoxManager : MonoBehaviour
         player2 = p2.GetComponent<Player2Script>();
 
         colliders = new BoxCollider2D[]{frame};
+
+        GameObject sound = GameObject.Find("Punch");
+        punch = sound.GetComponent<AudioSource>();
     
     }
 
@@ -57,6 +60,7 @@ public class HitBoxManager : MonoBehaviour
         {
             if(col.CompareTag("Player2")) {
                 p2Health.decreaseHealth(20);
+                punch.Play();
                 if (p2Health.isDone()==true) {
                     player2.animator.SetBool("KO", true);
                     
@@ -69,6 +73,7 @@ public class HitBoxManager : MonoBehaviour
         {
             if(col.CompareTag("Player")) {
                 p1Health.decreaseHealth(20);
+                punch.Play();
                 if (p1Health.isDone() == true) {
                     player1.animator.SetBool("KO", true);
                 }

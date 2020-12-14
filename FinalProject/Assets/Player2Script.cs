@@ -8,12 +8,16 @@ public class Player2Script : MonoBehaviour
     float movement = 0f;
     public float run = 10f;
     public HealthSystem p2Health;
+    public Timer _time;
 
 
     void Start()
     {
         GameObject go = GameObject.Find("HealthBar");
         p2Health =  go.GetComponent<HealthSystem>();
+
+        GameObject time = GameObject.Find("TimeCountdown");
+        _time = time.GetComponent<Timer>();
     }
 
     void OnTriggerEnter2D(Collider2D collider) 
@@ -27,7 +31,7 @@ public class Player2Script : MonoBehaviour
         movement = Input.GetAxisRaw("Horizontal") * run;
         animator.SetFloat("Speed", Mathf.Abs(movement));
 
-        if (p2Health.isDone() == false) {
+        if (p2Health.isDone() == false && _time.timeExpired() == false) {
             if (Input.GetKeyDown(KeyCode.A)) {
                 Vector3 position = this.transform.position;
                 position.x--;

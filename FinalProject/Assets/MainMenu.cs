@@ -15,6 +15,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     #if UNITY_EDITOR
     public void Quit() 
     {
